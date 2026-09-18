@@ -1,12 +1,88 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\DotNet Project\\Worker_Service\\WindowService1\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E634D501-FFDA-4F39-9CA1-C7DCD73BF80F}|WindowService1\\WindowService1.csproj|d:\\dotnet project\\worker_service\\windowservice1\\windowservice1\\data\\service1dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E634D501-FFDA-4F39-9CA1-C7DCD73BF80F}|WindowService1\\WindowService1.csproj|solutionrelative:windowservice1\\data\\service1dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E634D501-FFDA-4F39-9CA1-C7DCD73BF80F}|WindowService1\\WindowService1.csproj|d:\\dotnet project\\worker_service\\windowservice1\\windowservice1\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E634D501-FFDA-4F39-9CA1-C7DCD73BF80F}|WindowService1\\WindowService1.csproj|solutionrelative:windowservice1\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E634D501-FFDA-4F39-9CA1-C7DCD73BF80F}|WindowService1\\WindowService1.csproj|d:\\dotnet project\\worker_service\\windowservice1\\windowservice1\\windowservice1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E634D501-FFDA-4F39-9CA1-C7DCD73BF80F}|WindowService1\\WindowService1.csproj|solutionrelative:windowservice1\\windowservice1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E634D501-FFDA-4F39-9CA1-C7DCD73BF80F}|WindowService1\\WindowService1.csproj|d:\\dotnet project\\worker_service\\windowservice1\\windowservice1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E634D501-FFDA-4F39-9CA1-C7DCD73BF80F}|WindowService1\\WindowService1.csproj|solutionrelative:windowservice1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Service1DbContext.cs",
+              "DocumentMoniker": "D:\\DotNet Project\\Worker_Service\\WindowService1\\WindowService1\\Data\\Service1DbContext.cs",
+              "RelativeDocumentMoniker": "WindowService1\\Data\\Service1DbContext.cs",
+              "ToolTip": "D:\\DotNet Project\\Worker_Service\\WindowService1\\WindowService1\\Data\\Service1DbContext.cs",
+              "RelativeToolTip": "WindowService1\\Data\\Service1DbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-18T08:16:32.875Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "D:\\DotNet Project\\Worker_Service\\WindowService1\\WindowService1\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "WindowService1\\Models\\Employee.cs",
+              "ToolTip": "D:\\DotNet Project\\Worker_Service\\WindowService1\\WindowService1\\Models\\Employee.cs",
+              "RelativeToolTip": "WindowService1\\Models\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-18T08:16:17.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WindowService1",
+              "DocumentMoniker": "D:\\DotNet Project\\Worker_Service\\WindowService1\\WindowService1\\WindowService1.csproj",
+              "RelativeDocumentMoniker": "WindowService1\\WindowService1.csproj",
+              "ToolTip": "D:\\DotNet Project\\Worker_Service\\WindowService1\\WindowService1\\WindowService1.csproj",
+              "RelativeToolTip": "WindowService1\\WindowService1.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-09-18T08:15:48.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\DotNet Project\\Worker_Service\\WindowService1\\WindowService1\\Program.cs",
+              "RelativeDocumentMoniker": "WindowService1\\Program.cs",
+              "ToolTip": "D:\\DotNet Project\\Worker_Service\\WindowService1\\WindowService1\\Program.cs",
+              "RelativeToolTip": "WindowService1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-17T06:37:14.27Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

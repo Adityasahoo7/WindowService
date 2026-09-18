@@ -1,24 +1,52 @@
-namespace WindowService1
+using Microsoft.EntityFrameworkCore;
+
+using WindowService1.Data;
+
+namespace Service1;
+
+public class Worker : BackgroundService
 {
-    public class Worker : BackgroundService
+    private readonly IServiceScopeFactory _scopeFactory;
+    private readonly ILogger<Worker> _logger;
+
+    public Worker(
+        IServiceScopeFactory scopeFactory,
+        ILogger<Worker> logger)
     {
-        private readonly ILogger<Worker> _logger;
+        _scopeFactory = scopeFactory;
+        _logger = logger;
+    }
 
-        public Worker(ILogger<Worker> logger)
+    protected override async Task ExecuteAsync(
+        CancellationToken stoppingToken)
+    {
+        try
         {
-            _logger = logger;
-        }
+            using var scope = _scopeFactory.CreateScope();
 
-        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
-        {
-            while (!stoppingToken.IsCancellationRequested)
+            var dbContext =
+                scope.ServiceProvider
+                    .GetRequiredService<Service1DbContext>();
+
+            bool canConnect =
+                await dbContext.Database.CanConnectAsync(stoppingToken);
+
+            if (canConnect)
             {
-                if (_logger.IsEnabled(LogLevel.Information))
-                {
-                    _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
-                }
-                await Task.Delay(1000, stoppingToken);
+                _logger.LogInformation(
+                    "Successfully connected to Service1DB.");
             }
+            else
+            {
+                _logger.LogError(
+                    "Could not connect to Service1DB.");
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(
+                ex,
+                "Database connection failed.");
         }
     }
 }
