@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Service2.Services;
 using WindowService2;
 using WindowService2.Data;
 
@@ -26,7 +27,7 @@ builder.Services.AddWindowsService(options =>
     options.ServiceName = "Service2";
 });
 
-
+builder.Services.AddScoped<SyncService>();
 
 var host = builder.Build();
 host.Run();

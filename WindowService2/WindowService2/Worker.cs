@@ -1,24 +1,37 @@
-namespace WindowService2
+using Service2.Services;
+
+namespace Service2;
+
+public class Worker : BackgroundService
 {
-    public class Worker : BackgroundService
+    private readonly IServiceScopeFactory _scopeFactory;
+    private readonly ILogger<Worker> _logger;
+
+    public Worker(
+        IServiceScopeFactory scopeFactory,
+        ILogger<Worker> logger)
     {
-        private readonly ILogger<Worker> _logger;
+        _scopeFactory = scopeFactory;
+        _logger = logger;
+    }
 
-        public Worker(ILogger<Worker> logger)
+    protected override async Task ExecuteAsync(
+        CancellationToken stoppingToken)
+    {
+        try
         {
-            _logger = logger;
+            using var scope = _scopeFactory.CreateScope();
+
+            var syncService = scope.ServiceProvider
+                .GetRequiredService<SyncService>();
+
+            await syncService.SyncDataAsync(stoppingToken);
         }
-
-        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+        catch (Exception ex)
         {
-            while (!stoppingToken.IsCancellationRequested)
-            {
-                if (_logger.IsEnabled(LogLevel.Information))
-                {
-                    _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
-                }
-                await Task.Delay(1000, stoppingToken);
-            }
+            _logger.LogError(
+                ex,
+                "Error occurred during synchronization.");
         }
     }
 }

@@ -16,5 +16,7 @@ namespace WindowService2.Data
         }
 
         public DbSet<Employee>Employee2DS { get; set; }
+
+        public DbSet<SyncControl> SyncControls { get; set; }
     }
 }
